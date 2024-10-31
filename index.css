@@ -1,0 +1,446 @@
+/*******************************************************************************
+ * Ilios Dark Mode (UCSF)
+ * Version: 1.0.0
+ * License: MIT
+ *
+ * This is a custom dark mode theme for the Ilios platform at UCSF.
+ * To use this file, inject it into curriculum.ucsf.edu with a browser extension,
+ * such as Stylus, Tampermonkey, or Arc Boosts.
+ *
+ * IMPORTANT: This file hides some buttons, such as the user guide link, language
+ * selector, and the ICS feed link. You can re-enable these elements below.
+ *
+ * This project is not affiliated with or endorsed by the Univeristy of
+ * California, San Francisco (UCSF) or the Ilios Curriculum Management System
+ * (Ilios). The opinions or statements expressed herein should not be taken as a
+ * position of or endorsement by UCSF or Ilios.
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Copyright (c) 2024 Isaac Y. Kim
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the “Software”), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ ******************************************************************************/
+
+/* Hide UI elements */
+.user-guide-link, /* User guide link (question mark in navbar) */
+.ilios-calendar-ics-feed, /* ICS/RCS feed link, orange button next to "Calendar" */
+.locale-chooser /* Language selector in navbar on top */ {
+  display: none !important;
+}
+
+/*******************************************************************************
+ * Custom variables
+ * Modify these variables to change the color scheme of the theme.
+ ******************************************************************************/
+
+:root {
+  --background-color-primary: #000; /* Darkest color, default #000 */
+  --background-color-secondary: #333; /* Lightest color, default #333 */
+  --text-color-primary: #fff;
+  --text-color-secondary: #ccc;
+  --primary-color: #0f388a;
+  --accent-color: #006be9;
+  --warning-color: #e61048;
+  --link-color: #178ccb;
+  --font-multiplier: 0.9;
+  --footer-text: "Theme made with love by Isaac Y. Kim";
+}
+
+/*******************************************************************************
+ * Font
+ * I use Inter. You can use any font, or remove this section to use the default.
+ ******************************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.week-glance .event .event-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+select {
+  font-family: "Inter", sans-serif !important;
+}
+
+:root {
+  /* These variables are built into Ilios and aren't used in this sheet */
+  --fs-smallest: max(0.5rem, 9px) !important;
+  --fs-small: calc(0.833rem * var(--font-multiplier)) !important;
+  --fs-base: calc(1rem * var(--font-multiplier)) !important;
+  --fs-medium: calc(1.2rem * var(--font-multiplier)) !important;
+  --fs-large: calc(1.44rem * var(--font-multiplier)) !important;
+  --fs-xl: calc(1.728rem * var(--font-multiplier)) !important;
+  --fs-xxl: calc(2.074rem * var(--font-multiplier)) !important;
+  --fs-xxxl: calc(2.488rem * var(--font-multiplier)) !important;
+  --fs-huge: calc(15rem * var(--font-multiplier)) !important;
+  line-height: calc(2ex + var(--font-multiplier)) !important;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --fs-huge: calc(25rem * var(--font-multiplier));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --fs-huge: calc(30rem * var(--font-multiplier));
+    font-size: calc(10px + 0.5vw);
+  }
+}
+
+/* Set color scheme to change scroll bars and other browser UI elements */
+:root {
+  color-scheme: dark;
+}
+
+/*******************************************************************************
+ * Header / footer
+ * These styles control the header/footer colors and modifications.
+ ******************************************************************************/
+
+.ilios-footer,
+.ilios-logo,
+.ilios-header {
+  background-color: var(--accent-color) !important;
+}
+
+/* I swap out the Ilios logo with the UCSF logo
+ * You can replace the URL with any image you want, or if you like the Ilios
+ * logo, you can delete the next four CSS rules. */
+
+.ilios-logo > a > img {
+  visibility: hidden;
+}
+
+.ilios-logo > a {
+  display: flex;
+  height: 100% !important;
+}
+
+.ilios-logo > a::before {
+  visibility: visible;
+  color: white;
+  height: 1.2rem;
+  width: 2.4rem;
+  display: block;
+  align-self: center;
+  margin-left: 0.5rem;
+  content: "";
+
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/62/University_of_California%2C_San_Francisco_logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(1) brightness(400%);
+}
+
+.ilios-logo {
+  padding-bottom: 0 !important;
+}
+
+/* Custom footer text */
+
+/* div.version {
+  visibility: hidden;
+} */
+
+.ilios-footer .version {
+  background-color: var(--accent-color) !important;
+  border: none !important;
+  color: var(--text-color-secondary) !important;
+  font-weight: 400 !important;
+}
+
+.ilios-footer .version::after {
+  visibility: visible;
+  color: var(--text-color-primary) !important;
+  font-weight: 400;
+  content: var(--footer-text);
+  margin-left: calc(0.25rem + 1px);
+  padding-left: 0.25rem;
+  border-left: 1px solid var(--text-color-primary);
+}
+
+.locale-chooser button {
+  border: none !important;
+  color: var(--text-color-secondary) !important;
+}
+
+/*******************************************************************************
+ * Main color changes
+ * These styles control the background, text, and border colors of the theme.
+ ******************************************************************************/
+
+/* Primary color - for button backgrounds */
+.dashboard-navigation a,
+.dashboard-user-context-filter input:checked + label,
+.toggle-buttons input:checked + label,
+.token-maintenance > button,
+.display-mode-toggle-btn {
+  background-color: var(--primary-color) !important;
+}
+
+.display-mode-toggle-btn.active {
+  background-color: var(--accent-color) !important;
+}
+
+.display-mode-toggle-btn.disabled {
+  background-color: var(--background-color-secondary) !important;
+}
+
+/* Link color - changes all links and some other UI elements */
+.offering-url-display .copy-btn,
+.link-button,
+.truncate-text .expand-buttons,
+.weekly-calendar .day-headings .day-heading button,
+.monthly-calendar .calendar .day .day-number button,
+.monthly-calendar .calendar .day .month-more-events,
+.dashboard-calendar
+  .dashboard-calendar-content
+  .calendar-controls
+  .calendar-filter-list
+  ul
+  li,
+.dashboard-calendar
+  .dashboard-calendar-content
+  .filters-list
+  .filter-tags
+  .filters-clear-filters,
+.link,
+.link:visited,
+a,
+a:visited {
+  color: var(--link-color) !important;
+}
+
+/* Main & global changes */
+
+:root,
+.application-wrapper > main,
+.static-list,
+.locale-chooser .menu,
+.locale-chooser .toggle {
+  background-color: var(--background-color-primary) !important;
+}
+
+body,
+.weekly-calendar-event,
+.daily-calendar-event,
+.ilios-calendar-event-time,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+select {
+  color: var(--text-color-primary) !important;
+}
+
+/* username button + submenu in header */
+.user-menu .menu,
+.user-menu .menu a,
+.user-menu .toggle,
+/* Calendar toggles (at top - schedule and filters) */
+.toggle-buttons label {
+  background-color: var(--background-color-secondary) !important;
+  color: var(--text-color-primary) !important;
+}
+
+.user-guide-link a,
+.user-menu button {
+  border: none !important;
+}
+
+/* sub-header buttons */
+.dashboard-navigation > ul > li > a {
+  color: var(--text-color-primary) !important;
+}
+
+/* Border immediately below sub-header buttons */
+.dashboard-navigation,
+/* Border under "my materials" table header */
+.dashboard-materials .dashboard-materials-content table th {
+  border-bottom: 1px solid var(--background-color-secondary) !important;
+}
+
+/* Modify calendar events - make color darker, remove white borders */
+
+.weekly-calendar-event,
+.daily-calendar-event,
+.month-event {
+  position: relative;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  z-index: 0;
+}
+
+.weekly-calendar-event::after,
+.daily-calendar-event::after,
+.month-event::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(50%) saturate(180%);
+  z-index: -1;
+}
+
+/* Darken calendar lines */
+.weekly-calendar .days .half-hour-border,
+.weekly-calendar .days .hour-border,
+.daily-calendar .day .half-hour-border,
+.daily-calendar .day .hour-border {
+  border-top: 1px solid var(--background-color-secondary) !important;
+  filter: brightness(150%);
+}
+
+.weekly-calendar .days .events,
+.daily-calendar .day .events,
+.monthly-calendar .calendar .day {
+  border: 1px solid var(--background-color-secondary) !important;
+}
+
+.dashboard-calendar
+  .dashboard-calendar-content
+  .calendar-controls
+  .calendar-filter-list,
+.my-profile .blocks .large-component,
+.my-profile .blocks .small-component {
+  border: 1px solid var(--link-color) !important;
+}
+
+/* Pop-up when hovering over calendar event */
+.content,
+/* Filter background */
+.filters-list {
+  background-color: var(--background-color-secondary) !important;
+}
+
+/* Set custom filter colors */
+.dashboard-calendar .dashboard-calendar-content .filters-list .filter-tag {
+  background-color: var(--accent-color) !important;
+}
+
+.dashboard-calendar
+  .dashboard-calendar-content
+  .filters-list
+  .filter-tags
+  .tag-course {
+  filter: hue-rotate(0deg);
+}
+
+.dashboard-calendar
+  .dashboard-calendar-content
+  .filters-list
+  .filter-tags
+  .tag-session-type {
+  filter: hue-rotate(40deg);
+}
+
+.dashboard-calendar
+  .dashboard-calendar-content
+  .filters-list
+  .filter-tags
+  .tag-term {
+  filter: hue-rotate(80deg);
+}
+
+.dashboard-materials .dashboard-materials-content table thead,
+.leadership-list table thead,
+.leadership-manager table thead,
+.dashboard-materials .dashboard-materials-content table th,
+.my-profile .blocks .large-component,
+.my-profile .blocks .small-component,
+.dashboard-calendar
+  .dashboard-calendar-content
+  .calendar-controls
+  .calendar-filter-list
+  h5,
+.dashboard-materials
+  .dashboard-materials-content
+  table
+  tbody
+  tr:nth-child(even) {
+  background-color: var(--background-color-secondary) !important;
+}
+
+/* "recently updated" event icon in materials */
+.single-event .single-event-summary h2 .recently-updated-icon-event {
+  color: var(--warning-color) !important;
+}
+
+/* bounding box around "materials" when clicking into cal */
+.static-list {
+  border: 1px solid var(--background-color-secondary) !important;
+}
+
+/* dotted line under each objective */
+.single-event-objective-list .objective,
+/* dotted line under "my materials" */
+.dashboard-materials .dashboard-materials-content .material-list {
+  border-bottom: 1px dotted var(--accent-color) !important;
+}
+
+/* dotted line above "Manage API Tokens" */
+.my-profile .token-maintenance {
+  border-top: 1px dotted var(--accent-color) !important;
+}
+
+.single-event-objective-list .objective:last-of-type {
+  border-bottom: none !important;
+}
+
+/* week at a glance - left accent on each item */
+.week-glance .event {
+  position: relative;
+  border-left: none !important;
+  padding-left: 1rem !important;
+}
+
+.week-glance .event::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 3px solid var(--accent-color) !important;
+  filter: brightness(80%);
+  pointer-events: none;
+}
+
+.week-glance .event:nth-of-type(even)::before {
+  border-left: 3px solid var(--accent-color) !important;
+  filter: brightness(80%) hue-rotate(30deg);
+}
