@@ -1,6 +1,6 @@
 /*******************************************************************************
  * Ilios Dark Mode (UCSF)
- * Version: 1.0.0
+ * Version: 1.0.1
  * License: MIT
  *
  * This is a custom dark mode theme for the Ilios platform at UCSF.
@@ -38,6 +38,8 @@
  * SOFTWARE.
  ******************************************************************************/
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 /* Hide UI elements */
 .user-guide-link, /* User guide link (question mark in navbar) */
 .ilios-calendar-ics-feed, /* ICS/RCS feed link, orange button next to "Calendar" */
@@ -67,8 +69,6 @@
  * Font
  * I use Inter. You can use any font, or remove this section to use the default.
  ******************************************************************************/
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
   font-family: "Inter", sans-serif !important;
@@ -300,7 +300,7 @@ select {
   border-right: none !important;
   border-top: none !important;
   border-bottom: none !important;
-  z-index: 0;
+  z-index: 1;
 }
 
 .weekly-calendar-event::after,

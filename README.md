@@ -1,5 +1,7 @@
 # Ilios Dark Mode
 
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](<[index.user.css](https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.user.css)>) [![Install directly with Arc Boosts](https://img.shields.io/badge/Install%20directly%20with-Arc%20Boosts-F85068)](https://arc.net/boost/8157134F-66F1-4827-A5A5-9930AE1A76BB) [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?longCache=true)](LICENSE.md)
+
 This is a custom dark mode theme for the [Ilios Curriculum Management System](https://github.com/ilios/ilios) platform, intended for use at UCSF.
 
 ## Installation
@@ -8,11 +10,20 @@ To use this file, inject it into `curriculum.ucsf.edu` with a browser extension,
 
 - **User Javascript and CSS (recommended):** [Chrome Web Store](https://chromewebstore.google.com/detail/user-javascript-and-css/nbhcbdghjpllgmfilhnhkllmkecfmpld)
 - **Stylus:** [Chrome Web Store](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) | [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
-- **Arc Boosts:** [Arc Browser](https://arc.net/) - if you use the Arc browser, [you can use the pre-made boost for a one-click install](https://arc.net/boost/6B4DCDAD-9E3E-4D8C-9FBF-DC949543A610), or make your own boost by following the instructions below.
+- **Arc Boosts:** [Arc Browser](https://arc.net/)
+
+### Automatic Install Instructions
+
+Automatic install is available for Stylus and Arc Boosts.
+
+- **Stylus:** [You can use the userstyle for a faster install and automatic updates](https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.user.css). After opening the file, set "Custom included sites" to `*://curriculum.ucsf.edu/*`, and then click "Install style".
+- **Arc Boosts:** If you use the Arc browser, [you can use the pre-made boost for a one-click install](https://arc.net/boost/8157134F-66F1-4827-A5A5-9930AE1A76BB).
+
+### Manual Install Instructions
 
 Once you have your extension installed, follow the instructions below.
 
-- Select all the code in the `index.css` file and copy it to your clipboard.
+- [Select all the code in the `index.css` file](https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.css) (NOT ~~`index.user.css`~~) file and copy it to your clipboard.
 
 - Navigate to `curriculum.ucsf.edu`
 
