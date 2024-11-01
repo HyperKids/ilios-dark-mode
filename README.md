@@ -1,6 +1,6 @@
 # Ilios Dark Mode
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](<[index.user.css](https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.user.css)>) [![Install directly with Arc Boosts](https://img.shields.io/badge/Install%20directly%20with-Arc%20Boosts-F85068)](https://arc.net/boost/8157134F-66F1-4827-A5A5-9930AE1A76BB) [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?longCache=true)](LICENSE.md)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.user.css) [![Install directly with Arc Boosts](https://img.shields.io/badge/Install%20directly%20with-Arc%20Boosts-F85068)](https://arc.net/boost/8157134F-66F1-4827-A5A5-9930AE1A76BB) [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?longCache=true)](LICENSE.md)
 
 This is a custom dark mode theme for the [Ilios Curriculum Management System](https://github.com/ilios/ilios) platform, intended for use at UCSF.
 
