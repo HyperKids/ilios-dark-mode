@@ -16,7 +16,7 @@ To use this file, inject it into `curriculum.ucsf.edu` with a browser extension,
 
 Automatic install is available for Stylus and Arc Boosts.
 
-- **Stylus:** [You can use the userstyle for a faster install and automatic updates](https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.user.css). After opening the file, set "Custom included sites" to `*://curriculum.ucsf.edu/*`, and then click "Install style".
+- **Stylus:** [You can use the userstyle for a faster install and automatic updates](https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.user.css). After opening the file, click "Install style".
 - **Arc Boosts:** If you use the Arc browser, [you can use the pre-made boost for a one-click install](https://arc.net/boost/8157134F-66F1-4827-A5A5-9930AE1A76BB).
 
 ### Manual Install Instructions
