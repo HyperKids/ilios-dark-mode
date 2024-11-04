@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name         Ilios Dark Mode
+@description  A customizable dark mode theme for the Ilios platform at UCSF.
+@version      1.0.1
+@match        *://curriculum.ucsf.edu/*
+@updateURL    https://raw.githubusercontent.com/HyperKids/ilios-dark-mode/refs/heads/main/index.css
+==/UserStyle== */
+
+/* Use index.user.css for Stylus! The UserStyle metadata in this file is only
+ * for use with the Mac app Userscripts. */
+
 /*******************************************************************************
  * Ilios Dark Mode (UCSF)
  * Version: 1.0.1
